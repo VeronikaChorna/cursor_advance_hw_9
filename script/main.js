@@ -1,5 +1,3 @@
-// const button = document.querySelector('.btn');
-
 function generateBlocks() { 
     const divsAmound = 25;
     const container = document.querySelector(".container");
@@ -28,10 +26,3 @@ function generateBlocksInterval() {
 
 generateBlocks();
 document.getElementById("clickMe").onclick = generateBlocksInterval;
-
-
-
-
-
-
-  
