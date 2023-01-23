@@ -1,3 +1,5 @@
+// const button = document.querySelector('.btn');
+
 function generateBlocks() { 
     const divsAmound = 25;
     const container = document.querySelector(".container");
@@ -16,7 +18,6 @@ const setDivBg = () => {
   }
 
 function generateBlocksInterval() {
-    generateBlocks();
     setInterval(() => {
         for (let i = 0; i < 25; i++) {
             let b = document.getElementById('block' + i);
@@ -25,6 +26,7 @@ function generateBlocksInterval() {
     }, 1000);
 }
 
+generateBlocks();
 document.getElementById("clickMe").onclick = generateBlocksInterval;
 
 
