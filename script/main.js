@@ -1,33 +1,30 @@
 const button = document.querySelector('.btn');
-const container = document.querySelector(".container");
 
-button.onclick = generateBlocks;
+button.onclick = generateBlocks();
 
-function generateBlocks() {
-    // let div;
-    // for (let i = 1;  i <= 25; i++) {
-    //     div = document.createElement("div");   
-    // } 
 
-    // div.classList.add("box");
-    // container.prepend(div);
 
+function generateBlocks() { 
     const divsAmound = 25;
-    const arrayDiv = new Array();
+    const container = document.querySelector(".container");
+   
+    const setDivBg = () => {
+        const randomColor = Math.floor(Math.random()*16777215).toString(16);
+        return randomColor;
+      }
 
-    for (var i = 0; i < divsAmound; i++) {
-        arrayDiv[i] = document.createElement('div');
-        arrayDiv[i].id = 'block' + i;
-        arrayDiv[i].style.backgroundColor = "#" + setDivBg();;
-        arrayDiv[i].className = 'block' + i;
-        arrayDiv[i].className = 'box';
-
-        document.body.appendChild(arrayDiv[i]);
+    for (let i = 0; i < divsAmound; i++) {
+       div = document.createElement('div');
+       div.id = 'block' + i;
+       div.style.backgroundColor = "#" + setDivBg();
+       div.className = 'box';
+       container.prepend(div);
+        // divs = document.getElementsByClassName('box');
+    }
+    
 }
-}
 
-const setDivBg = () => {
-    const randomColor = Math.floor(Math.random()*16777215).toString(16);
-    return randomColor;
-  }
+
+
+
   
