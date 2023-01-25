@@ -1,5 +1,6 @@
+const divsAmound = 25;
+
 function generateBlocks() { 
-    const divsAmound = 25;
     const container = document.querySelector(".container");
     for (let i = 0; i < divsAmound; i++) {
        div = document.createElement('div');
@@ -17,7 +18,7 @@ const setDivBg = () => {
 
 function generateBlocksInterval() {
     setInterval(() => {
-        for (let i = 0; i < 25; i++) {
+        for (let i = 0; i < divsAmound; i++) {
             let b = document.getElementById('block' + i);
             b.style.backgroundColor = "#" + setDivBg();
         }
